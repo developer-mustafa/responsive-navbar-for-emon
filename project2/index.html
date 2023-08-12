@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <title></title>
+</head>
+<body>
+  
+<style>
+
+  body{
+    background-color: #070707;
+  }
+  nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #474343;
+  color:WHITE;
+  font-size: 1.5rem;
+  padding:0 60px;
+  
+
+  }
+
+ 
+  nav ul{
+    display: flex;
+    gap:15px;
+
+
+  }
+  nav ul a, .logo a{
+    text-transform: uppercase;
+  }
+
+  
+  nav ul a:hover , .logo a:hover{
+    color:red;
+  }
+
+.checkbox , .fa-bars{
+  display: none;
+  font-size: 2em;
+  color:white;
+}
+
+
+  @media only screen  and (max-width: 768px){
+    
+    nav ul{
+      position: fixed;
+      left:-100%;
+      top:100px;
+      background-color: #000000;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      flex-direction: column;
+      transition: all 0.5s ease;
+      
+    }
+
+  
+
+   .fa-bars{
+    display: block;
+     transition: all 0.5s ease;
+     cursor:pointer;
+   
+   }
+
+    .checkbox:checked ~ ul{
+      left:0;
+    }
+
+    .checkbox:checked ~ label i::before{
+      content: '\f00d';
+      transition: all 0.5s ease;
+      cursor:pointer;
+
+    }
+  }
+ 
+
+
+</style>
+
+
+<nav>
+
+  <div class="logo">
+  <a href="#">web design mastery</a>
+  </div>
+
+  <input type="checkbox" id="connect" class="checkbox">
+  <label for="connect"><i class="fa-solid fa-bars"></i></label>
+
+  <ul>
+  
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">contact</a></li>
+  </ul>
+</nav>
+
+
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
